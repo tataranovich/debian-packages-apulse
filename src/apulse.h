@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014  Rinat Ibragimov
+ * Copyright © 2014-2015  Rinat Ibragimov
  *
  * This file is part of "apulse" project.
  *
@@ -120,6 +120,7 @@ struct pa_stream {
     ringbuffer_t           *rb;
     void                   *peek_buffer;
     size_t                  peek_buffer_data_len;
+    volatile int            paused;
 };
 
 struct pa_operation {

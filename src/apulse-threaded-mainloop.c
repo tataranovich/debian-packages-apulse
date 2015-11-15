@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014  Rinat Ibragimov
+ * Copyright © 2014-2015  Rinat Ibragimov
  *
  * This file is part of "apulse" project.
  *
@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+#define _XOPEN_SOURCE   500
 #include "apulse.h"
 #include "trace.h"
 
@@ -105,7 +106,7 @@ pa_threaded_mainloop_new(void)
     m->m = pa_mainloop_new();
 
     pthread_mutexattr_init(&mutex_attr);
-    pthread_mutexattr_settype(&mutex_attr, PTHREAD_MUTEX_RECURSIVE_NP);
+    pthread_mutexattr_settype(&mutex_attr, PTHREAD_MUTEX_RECURSIVE);
     pthread_mutex_init(&m->lock, &mutex_attr);
     pthread_mutexattr_destroy(&mutex_attr);
 

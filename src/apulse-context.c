@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014  Rinat Ibragimov
+ * Copyright © 2014-2015  Rinat Ibragimov
  *
  * This file is part of "apulse" project.
  *
@@ -68,6 +68,22 @@ pa_context_errno(pa_context *c)
     trace_info("Z %s c=%p\n", __func__, c);
 
     return 0;
+}
+
+APULSE_EXPORT
+uint32_t
+pa_context_get_protocol_version(pa_context *c)
+{
+    trace_info("F %s c=%p\n", __func__, c);
+    return PA_PROTOCOL_VERSION;
+}
+
+APULSE_EXPORT
+uint32_t
+pa_context_get_server_protocol_version(pa_context *c)
+{
+    trace_info("F %s c=%p\n", __func__, c);
+    return 8;   // PA headers say "8" is the protocol version used in PulseAudio 0.9
 }
 
 APULSE_EXPORT
