@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014  Rinat Ibragimov
+ * Copyright © 2014-2015  Rinat Ibragimov
  *
  * This file is part of "apulse" project.
  *
@@ -195,13 +195,6 @@ pa_channel_map* pa_channel_map_init(pa_channel_map *m)
 }
 
 APULSE_EXPORT
-const char* pa_channel_position_to_string(pa_channel_position_t pos)
-{
-    trace_info("Z %s\n", __func__);
-    return NULL;
-}
-
-APULSE_EXPORT
 pa_channel_position_t pa_channel_position_from_string(const char *s)
 {
     trace_info("Z %s\n", __func__);
@@ -216,13 +209,6 @@ const char* pa_channel_position_to_pretty_string(pa_channel_position_t pos)
 }
 
 APULSE_EXPORT
-char* pa_channel_map_snprint(char *s, size_t l, const pa_channel_map *map)
-{
-    trace_info("Z %s\n", __func__);
-    return NULL;
-}
-
-APULSE_EXPORT
 pa_channel_map *pa_channel_map_parse(pa_channel_map *map, const char *s)
 {
     trace_info("Z %s\n", __func__);
@@ -231,13 +217,6 @@ pa_channel_map *pa_channel_map_parse(pa_channel_map *map, const char *s)
 
 APULSE_EXPORT
 int pa_channel_map_equal(const pa_channel_map *a, const pa_channel_map *b)
-{
-    trace_info("Z %s\n", __func__);
-    return 0;
-}
-
-APULSE_EXPORT
-int pa_channel_map_valid(const pa_channel_map *map)
 {
     trace_info("Z %s\n", __func__);
     return 0;
@@ -307,30 +286,10 @@ pa_encoding_t pa_encoding_from_string(const char *encoding)
 }
 
 APULSE_EXPORT
-pa_format_info* pa_format_info_new(void)
-{
-    trace_info("Z %s\n", __func__);
-    return NULL;
-}
-
-APULSE_EXPORT
 pa_format_info* pa_format_info_copy(const pa_format_info *src)
 {
     trace_info("Z %s\n", __func__);
     return NULL;
-}
-
-APULSE_EXPORT
-void pa_format_info_free(pa_format_info *f)
-{
-    trace_info("Z %s\n", __func__);
-}
-
-APULSE_EXPORT
-int pa_format_info_valid(const pa_format_info *f)
-{
-    trace_info("Z %s\n", __func__);
-    return 0;
 }
 
 APULSE_EXPORT
@@ -454,30 +413,6 @@ void pa_format_info_set_prop_string_array(pa_format_info *f, const char *key, co
 }
 
 APULSE_EXPORT
-void pa_format_info_set_sample_format(pa_format_info *f, pa_sample_format_t sf)
-{
-    trace_info("Z %s\n", __func__);
-}
-
-APULSE_EXPORT
-void pa_format_info_set_rate(pa_format_info *f, int rate)
-{
-    trace_info("Z %s\n", __func__);
-}
-
-APULSE_EXPORT
-void pa_format_info_set_channels(pa_format_info *f, int channels)
-{
-    trace_info("Z %s\n", __func__);
-}
-
-APULSE_EXPORT
-void pa_format_info_set_channel_map(pa_format_info *f, const pa_channel_map *map)
-{
-    trace_info("Z %s\n", __func__);
-}
-
-APULSE_EXPORT
 void pa_operation_set_state_callback(pa_operation *o, pa_operation_notify_cb_t cb, void *userdata)
 {
     trace_info("Z %s\n", __func__);
@@ -536,20 +471,6 @@ const char* pa_context_get_server(pa_context *c)
 {
     trace_info("Z %s\n", __func__);
     return NULL;
-}
-
-APULSE_EXPORT
-uint32_t pa_context_get_protocol_version(pa_context *c)
-{
-    trace_info("Z %s\n", __func__);
-    return 0;
-}
-
-APULSE_EXPORT
-uint32_t pa_context_get_server_protocol_version(pa_context *c)
-{
-    trace_info("Z %s\n", __func__);
-    return 0;
 }
 
 APULSE_EXPORT
@@ -881,13 +802,6 @@ pa_cvolume* pa_cvolume_dec(pa_cvolume *v, pa_volume_t dec)
 }
 
 APULSE_EXPORT
-pa_stream *pa_stream_new_extended(pa_context *c, const char *name, pa_format_info * const * formats, unsigned int n_formats, pa_proplist *p)
-{
-    trace_info("Z %s\n", __func__);
-    return NULL;
-}
-
-APULSE_EXPORT
 pa_context* pa_stream_get_context(pa_stream *p)
 {
     trace_info("Z %s\n", __func__);
@@ -899,20 +813,6 @@ const char *pa_stream_get_device_name(pa_stream *s)
 {
     trace_info("Z %s\n", __func__);
     return NULL;
-}
-
-APULSE_EXPORT
-int pa_stream_is_suspended(pa_stream *s)
-{
-    trace_info("Z %s\n", __func__);
-    return 0;
-}
-
-APULSE_EXPORT
-int pa_stream_is_corked(pa_stream *s)
-{
-    trace_info("Z %s\n", __func__);
-    return 0;
 }
 
 APULSE_EXPORT

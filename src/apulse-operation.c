@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014  Rinat Ibragimov
+ * Copyright © 2014-2015  Rinat Ibragimov
  *
  * This file is part of "apulse" project.
  *
@@ -128,6 +128,10 @@ pa_operation_state_t
 pa_operation_get_state(pa_operation *o)
 {
     trace_info("F %s o=%p\n", __func__, o);
+    if (!o) {
+        trace_error("Z %s operation is NULL\n", __func__);
+        return PA_OPERATION_DONE;
+    }
     return o->state;
 }
 
