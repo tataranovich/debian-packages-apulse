@@ -1,3 +1,9 @@
+apulse (0.1.6-1) unstable; urgency=medium
+
+  * New upstream version 0.1.6.
+
+ -- Andrey Tataranovich <tataranovich@gmail.com>  Sun, 15 Nov 2015 17:18:03 +0300
+
 apulse (0.1.5-1) unstable; urgency=low
 
   * New upstream version.
